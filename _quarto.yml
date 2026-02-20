@@ -10,7 +10,7 @@ website:
     center: |
       © 2022 Shaoyi Lai ❤ Made with [Quarto](https://quarto.org/)
   navbar:
-#   logo: index.jpg
+#   logo: index.jpgc
     left:
       - href: about.qmd
         text: About
