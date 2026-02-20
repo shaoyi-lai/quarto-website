@@ -1,0 +1,105 @@
+/* css styles */
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* Navbar links: default white */
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #ffffff;
+}
+
+/* Navbar links on hover / focus */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #154734;
+}
+
+.navbar-logo {
+  height: 1em;
+}
+
+
+
+
+/* Ensure Solana about layout keeps text first, image last */
+.quarto-about-solana .about-entity {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.myfootprint {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14%, 1fr));
+  grid-gap: 0.5em;
+}
+.myfootprint figcaption{
+  display: none;
+}
+
+.after-about {
+  max-width: 900px;
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+.after-about + section {
+  max-width: 900px;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+/* Default / Desktop: image beside text */
+@media (min-width: 769px) {
+  .quarto-about-solana .about-entity {
+    flex-direction: row !important;
+    text-align: left !important;
+    align-items: center;
+  }
+
+  .quarto-about-solana .about-image {
+    margin-top: 0 !important;
+    margin-left: 2rem !important;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .quarto-about-solana .about-entity {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .quarto-about-solana .about-image {
+    margin-left: 0;
+    margin-top: 1.5rem;
+    align-self: center;
+  }
+  
+.myfootprint {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 1em;
+  figcaption: opacity(0);
+}
+
+.quarto-about-solana .entity-contents {
+  order: 2;
+  text-align: left !important;
+}
+
+/* Force portrait to come AFTER text */
+.quarto-about-solana .about-image {
+  order: 1;
+  margin-left: 2rem;
+}
+}

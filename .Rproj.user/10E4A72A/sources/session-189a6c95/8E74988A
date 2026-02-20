@@ -1,0 +1,33 @@
+{
+    "id": "8E74988A",
+    "path": "~/quarto/shaoyi.info/shaoyi.info/trivia.qmd",
+    "project_path": "trivia.qmd",
+    "type": "quarto_markdown",
+    "hash": "1326815835",
+    "contents": "",
+    "dirty": false,
+    "created": 1769812044212.0,
+    "source_on_save": true,
+    "relative_order": 10,
+    "properties": {
+        "rmdVisualMode": "false",
+        "rmdVisualWrapConfigured": "true",
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "cursorPosition": "23,119",
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "2:0",
+        "docOutlineSize": "238"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1771616378,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1771616378376,
+    "read_only": false,
+    "read_only_alternatives": []
+}

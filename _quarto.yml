@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  bread-crumbs: true
+  reader-mode: false
+  title: "Shaoyi Lai"
+  page-footer: 
+    background: secondary
+    center: |
+      © 2022 Shaoyi Lai ❤ Made with [Quarto](https://quarto.org/)
+  navbar:
+#   logo: index.jpg
+    left:
+      - href: about.qmd
+        text: About
+      - href: trivia.qmd
+        text: Trivia
+      - href: footprint.qmd
+        text: 🦶
+
+format:
+  html:
+    theme:
+      - united
+      - brand
+    css: styles.css
+    toc: false
+
+editor: visual
+

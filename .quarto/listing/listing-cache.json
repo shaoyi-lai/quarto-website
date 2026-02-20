@@ -1,0 +1,12 @@
+{
+  "listingMap": {
+    "publication.qmd": [
+      "B3049D40"
+    ],
+    "publications.qmd": [
+      "B3049D40",
+      "articles/20*.qmd",
+      "conferences/20*.qmd"
+    ]
+  }
+}

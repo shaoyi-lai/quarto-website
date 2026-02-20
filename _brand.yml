@@ -1,0 +1,28 @@
+color:
+#  palette:
+#    dark-grey: "#222222"
+#    blue: "#ddeaf1"
+  foreground: "#1A1A1A"
+  background: "#FFFFFF"
+  primary: "#E87500"       # UT Dallas Orange
+  secondary: "#154734"     # UT Dallas Green
+  tertiary: "#5FE0B7"      # PMS 3375 mint accent
+  success: "#1A7F49"
+  info: "#007B9E"
+  warning: "#F4B400"
+  danger: "#D93025"
+  light: "#F5F5F5"
+  dark: "#333333"
+
+logo: 
+  medium: images/favicon.svg
+
+typography:
+  fonts:
+    - family: Huninn
+      source: google
+    - family: Fira Mono
+      source: google
+  base: Huninn
+  headings: Huninn
+  monospace: Fira Mono

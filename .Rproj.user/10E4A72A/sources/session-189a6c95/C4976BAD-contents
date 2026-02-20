@@ -1,0 +1,10 @@
+---
+title: "Listing Example"
+listing:
+  - id: articles-list
+    contents: articles/20*.qmd
+    template: publications.ejs
+#  - id: conferences-list
+#    contents: conferences/20*.qmd
+#    template: publications.ejs
+---

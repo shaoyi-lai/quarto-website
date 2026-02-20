@@ -1,0 +1,38 @@
+{
+  "index.qmd": {
+    "index.html": "098c45c3"
+  },
+  "about.qmd": {
+    "about.html": "b3fc63ed"
+  },
+  "404.qmd": {
+    "404.html": "a088515a"
+  },
+  "footprint.qmd": {
+    "footprint.html": "2ebe7afa"
+  },
+  "epps7313final/epps7313final.qmd": {
+    "epps7313final.html": "ec493036",
+    "epps7313final.tex": "cc36c942",
+    "epps7313final.pdf": "148f4d5a"
+  },
+  "epps7316/w1.qmd": {
+    "w1.html": "d1d001c6",
+    "w1.tex": "183d79d6"
+  },
+  "trivia.qmd": {
+    "trivia.html": "662b00dc"
+  },
+  "publication.qmd": {
+    "publication.html": "03a3e473"
+  },
+  "publications.qmd": {
+    "publications.html": "6916028c"
+  },
+  "ejs/publications.ejs.qmd": {
+    "publications.ejs.html": "daf2d461"
+  },
+  "articles/2026What.qmd": {
+    "2026What.html": "00f2f176"
+  }
+}
