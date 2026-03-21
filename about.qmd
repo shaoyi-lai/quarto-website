@@ -5,22 +5,72 @@ about:
   template: trestles
   image-shape: round
   image-width: 15em
-  links:
-    - icon: twitter-x
-      href: https://twitter.com/imonimaru
-      # text: X
-    - icon: github
-      href: https://github.com/shaoyi-lai
-      # text: GitHub
-    - icon: youtube
-      href: https://www.youtube.com/@luasiauiat
-      # text: YouTube
-    - icon: line
-      href: https://line.me/ti/p/69aLXk9Uoi
-      # text: Line
-    - icon: instagram
-      href: https://instagram.com/shaoyi.info
 ---
+
+```{=html}
+<style>
+  .avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .avatar-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+  }
+  .avatar-hover {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+  .avatar-wrapper.active .avatar-default { opacity: 0; }
+  .avatar-wrapper.active .avatar-hover   { opacity: 1; }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const base = document.querySelector("img.about-image");
+    if (!base) return;
+
+    // Wrap the existing image
+    const wrapper = document.createElement("div");
+    wrapper.className = "avatar-wrapper";
+    base.classList.add("avatar-default");
+    base.parentNode.insertBefore(wrapper, base);
+    wrapper.appendChild(base);
+
+    // Overlay the hover image
+    const hover = document.createElement("img");
+    hover.src = base.src.replace("profile.png", "profile-hover.png");
+    hover.className = "avatar-hover";
+    hover.alt = "";
+    wrapper.appendChild(hover);
+
+    // Desktop
+    wrapper.addEventListener("mouseenter", () => wrapper.classList.add("active"));
+    wrapper.addEventListener("mouseleave", () => wrapper.classList.remove("active"));
+
+    // Mobile touch — tap to toggle
+    wrapper.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      wrapper.classList.toggle("active");
+    }, { passive: false });
+
+    // Photo credit below the name
+    const h1 = document.querySelector("#quarto-content h1");
+    if (h1) {
+      const credit = document.createElement("p");
+      credit.innerHTML = 'Credit to not-so-secret photo: <a href="https://instagram.com/taiwanjoe" target="_blank" rel="noopener">@taiwanjoe</a>';
+      credit.style.cssText = "font-size:0.75rem; color: #888; margin-top:0.15rem;";
+      h1.insertAdjacentElement("afterend", credit);
+    }
+  });
+</script>
+```
 
 I previously served as a public affairs officer with experience in military strategic communications—press releases, print materials, and digital content. I’ve worked with journalists and other communicators to explain defense policy clearly and credibly.
 
@@ -29,11 +79,10 @@ I also study the PRC’s influence operations and information warfare, with a fo
 📢 Pronounced [Shàoyì](https://voca.ro/12SteQV3fTDZ) (Shao-yee). Feel free to call me Yee if that’s easier.
 
 ### Education
-- National Defense University, Taipei, Taiwan — M.A. in Journalism, Aug. 2014–Jun. 2016
 
-- National Defense University, Taipei, Taiwan — B.A. in Journalism, Jan. 2008–Jun. 2012
+-   National Defense University, Taipei, Taiwan — M.A. in Journalism, Aug. 2014–Jun. 2016
 
-
+-   National Defense University, Taipei, Taiwan — B.A. in Journalism, Jan. 2008–Jun. 2012
 
 ### Publications
 

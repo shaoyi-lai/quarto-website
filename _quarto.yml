@@ -1,16 +1,42 @@
 project:
   type: website
+  resources:
+    - CNAME
+    - images/profile-hover.png
 
 website:
   bread-crumbs: true
   reader-mode: false
   title: "Shaoyi Lai"
+  site-url: https://www.shaoyi.info
   page-footer: 
     background: secondary
     center: |
       © 2022 Shaoyi Lai ❤ Made with [Quarto](https://quarto.org/)
+    left:
+      - icon: envelope
+        href: mailto:shao-yi.lai@utdallas.edu
+      - icon: whatsapp
+        href: https://wa.me/19453919890
+    right:
+#        - icon: twitter-x
+#          href: https://twitter.com/imonimaru
+          # text: X
+        - icon: github
+          href: https://github.com/shaoyi-lai
+          # text: GitHub
+#        - icon: youtube
+#          href: https://www.youtube.com/@luasiauiat
+          # text: YouTube
+        - icon: line
+          href: https://line.me/ti/p/69aLXk9Uoi
+          # text: Line
+        - icon: facebook
+          href: https://facebook.com/luasiauiat
+        - icon: instagram
+          href: https://instagram.com/shaoyi.info
   navbar:
-#   logo: index.jpgc
+#   logo: index.jpg
     left:
       - href: about.qmd
         text: About
