@@ -134,30 +134,65 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
   </div>
 </header>
-    <div class="about-links">
-  <a href="https://twitter.com/imonimaru" class="about-link" rel="" target="">
-    <i class="bi bi-twitter-x"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://github.com/shaoyi-lai" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://www.youtube.com/@luasiauiat" class="about-link" rel="" target="">
-    <i class="bi bi-youtube"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://line.me/ti/p/69aLXk9Uoi" class="about-link" rel="" target="">
-    <i class="bi bi-line"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://instagram.com/shaoyi.info" class="about-link" rel="" target="">
-    <i class="bi bi-instagram"></i>
-     <span class="about-link-text"></span>
-  </a>
-</div>
   </div>
   <div class="about-contents"><main class="content" id="quarto-document-content">
+<style>
+  .avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .avatar-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+  }
+  .avatar-hover {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+  .avatar-wrapper.active .avatar-default { opacity: 0; }
+  .avatar-wrapper.active .avatar-hover   { opacity: 1; }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const base = document.querySelector("img.about-image");
+    if (!base) return;
+    // Wrap the existing image
+    const wrapper = document.createElement("div");
+    wrapper.className = "avatar-wrapper";
+    base.classList.add("avatar-default");
+    base.parentNode.insertBefore(wrapper, base);
+    wrapper.appendChild(base);
+    // Overlay the hover image
+    const hover = document.createElement("img");
+    hover.src = base.src.replace("profile.png", "profile-hover.png");
+    hover.className = "avatar-hover";
+    hover.alt = "";
+    wrapper.appendChild(hover);
+    // Desktop
+    wrapper.addEventListener("mouseenter", () => wrapper.classList.add("active"));
+    wrapper.addEventListener("mouseleave", () => wrapper.classList.remove("active"));
+    // Mobile touch — tap to toggle
+    wrapper.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      wrapper.classList.toggle("active");
+    }, { passive: false });
+    // Photo credit below the name
+    const h1 = document.querySelector("#quarto-content h1");
+    if (h1) {
+      const credit = document.createElement("p");
+      credit.innerHTML = 'Credit to not-so-secret photo: <a href="https://instagram.com/taiwanjoe" target="_blank" rel="noopener">@taiwanjoe</a>';
+      credit.style.cssText = "font-size:0.75rem; color: #888; margin-top:0.15rem;";
+      h1.insertAdjacentElement("afterend", credit);
+    }
+  });
+</script>
 <p>I previously served as a public affairs officer with experience in military strategic communications—press releases, print materials, and digital content. I’ve worked with journalists and other communicators to explain defense policy clearly and credibly.</p>
 <p>I also study the PRC’s influence operations and information warfare, with a focus on disinformation, narrative strategy, and how public perception shifts in high-stakes geopolitical environments.</p>
 <p>📢 Pronounced <a href="https://voca.ro/12SteQV3fTDZ">Shàoyì</a> (Shao-yee). Feel free to call me Yee if that’s easier.</p>
@@ -578,13 +613,51 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:shao-yi.lai@utdallas.edu">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://wa.me/19453919890">
+      <i class="bi bi-whatsapp" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>   
     <div class="nav-footer-center">
 <p>© 2022 Shaoyi Lai ❤ Made with <a href="https://quarto.org/">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/shaoyi-lai">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://line.me/ti/p/69aLXk9Uoi">
+      <i class="bi bi-line" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://facebook.com/luasiauiat">
+      <i class="bi bi-facebook" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/shaoyi.info">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>
